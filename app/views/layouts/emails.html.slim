@@ -1,0 +1,9 @@
+- content_for :navigation
+  .d-flex.justify-content-between.align-items-center.mb-3
+    - unless action_name == 'index'
+      = link_to '← Emails', emails_path
+
+    - unless action_name == 'new'
+      = link_to 'Add email', new_email_path, class: 'ms-auto'
+
+= render template: 'layouts/application'
